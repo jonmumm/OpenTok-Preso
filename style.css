@@ -1,0 +1,51 @@
+.opentok_logo {
+  width: 800px;
+}
+
+.opentok {
+  width: 200px;
+}
+
+.opentok_text {
+  color: #0ae;
+}
+
+.question {
+  float: left;
+}
+
+.opentok_widget {
+  background: black;
+}
+
+.larger {
+  font-size: 250%;
+}
+
+.large {
+  font-size: 175%;
+}
+
+.interaction {
+  margin-top: 0;
+}
+
+.interaction img {
+  text-align: center;
+}
+
+.architecture {
+  margin-top: 0 !important;
+}
+
+.architecture img {
+  height: 620px;
+  margin-top: -40px;
+  margin-left: 100px;
+}
+
+.architecture code {
+  position: absolute;
+  top: 580px;
+  left: 40px;
+}
