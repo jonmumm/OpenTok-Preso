@@ -1,1 +1,0 @@
-!SLIDE opentok_widget
