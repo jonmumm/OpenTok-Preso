@@ -2,14 +2,25 @@
 
 ![architecture](../img/architecture/Slide1.jpg)
 
+!SLIDE architecture
+
+![architecture](../img/architecture/Slide2.jpg)
+
 	@@@ javascript
-	// Init and connect to session
+	// Initialize session
 	var session = TB.initSession(sessionId);
+
+!SLIDE architecture
+
+![architecture](../img/architecture/Slide3.jpg)
+
+	@@@ javascript
+	// Connect to session
 	session.connect(apiKey, token);
 
 !SLIDE architecture
 
-![architecture](../img/architecture/Slide2.jpg)
+![architecture](../img/architecture/Slide4.jpg)
 
 	@@@ javascript
 	// Publish webcam stream to session
@@ -17,7 +28,7 @@
 	
 !SLIDE architecture
 
-![architecture](../img/architecture/Slide3.jpg)
+![architecture](../img/architecture/Slide5.jpg)
 
 	@@@ javascript
 	// Listen for stream created event
@@ -26,7 +37,7 @@
 	
 !SLIDE architecture smaller
 
-![architecture](../img/architecture/Slide4.jpg)
+![architecture](../img/architecture/Slide6.jpg)
 
 	@@@ javascript
 	// Subscribe to all new streams

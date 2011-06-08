@@ -1,7 +1,3 @@
-!SLIDE center
-
-![screenshot](../img/screenshot.jpg)
-
 !SLIDE
 
 ## go to ##

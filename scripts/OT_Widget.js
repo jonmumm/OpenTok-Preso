@@ -2,6 +2,8 @@ var OT_Widget = function() {
 	var session;
 	
 	var divId;
+	
+	var count = 0;
 
 	//--------------------------------------
 	//  OPENTOK EVENT HANDLERS
@@ -31,6 +33,7 @@ var OT_Widget = function() {
 			for (var j = 0; j < subscribers.length; j++) {
 				// Then remove each stream
 				OT_LayoutContainer.removeStream(subscribers[j].id);
+				count--;
 			}
 		}
 
@@ -63,6 +66,8 @@ var OT_Widget = function() {
 	var subscribeToStreams = function (streams) {
 		// For each stream
 		for (var i = 0; i < streams.length; i++) {
+		  if (count >= 8) break;
+		  		  
 			// Check if this is the stream that I am publishing, and if so do not subscribe.
 			if (streams[i].connection.connectionId != session.connection.connectionId) {
 				// Make a unique div id for this stream
@@ -70,8 +75,9 @@ var OT_Widget = function() {
 
 				// Pass in FALSE since this is a subscriber
 				OT_LayoutContainer.addStream(divId, false);
+				count++;	
 
-				session.subscribe(streams[i], divId);				
+				session.subscribe(streams[i], divId);			
 			}
 		}
 	}
@@ -97,15 +103,14 @@ var OT_Widget = function() {
 		},
 		
 		cleanup: function() {
-		  /*
-		  // Don't need this?
-		  // Remove all divs from the page
+
+		  // Remove all child divs from the page
 		  var div = document.getElementById(divId);
 		  if (div.hasChildNodes()) {
 		    while (div.childNodes.length >= 1) {
 		      div.removeChild(div.firstChild);
 		    }
-		  }*/
+		  }
 		  
 		  session.removeEventListener('streamDestroyed', streamDestroyedHandler);
 		  session.disconnect();
