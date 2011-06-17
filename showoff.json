@@ -1,8 +1,8 @@
-{ "name": "My Preso", 
+{ "name": "OpenTok", 
   "sections": [ 
     { "section": "1-what" },
     { "section": "2-why" },
-    { "section": "3-who" },
-    { "section": "4-how" }
+    { "section": "4-how" },
+		{ "section": "5-examples" }
   ]
 }
